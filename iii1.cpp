@@ -11,7 +11,7 @@ void RemoveDuplicates(Nod *first)
 {
     Nod *p ;
 
-    for(p = first; p != NULL; p = p->next)
+    for(p = first; p != NULL&&p->next!=NULL; p = p->next)
     {
         if(p->inf == p->next->inf)
             p->next=p->next->next;
